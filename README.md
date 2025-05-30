@@ -1,5 +1,5 @@
 # PydanticAi_GPT4ALL
-Integration von Pydantic AI mit GPT4All
+Integration von Pydantic AI mit GPT4All  
 Überblick  
 Dieses Projekt zeigt, wie man Pydantic AI mit dem lokal laufenden Sprachmodell GPT4All kombiniert, um leistungsstarke, strukturierte KI-Antworten zu erzeugen – komplett ohne externe Cloud-APIs.
 

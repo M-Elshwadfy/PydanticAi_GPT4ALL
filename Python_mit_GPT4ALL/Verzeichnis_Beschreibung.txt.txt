@@ -1,0 +1,1 @@
+Diese Verzeichnis enthält Python Codes zur Verwendung von GPT4ALL Modelle ohne Implementirung von Pydantic-Ai

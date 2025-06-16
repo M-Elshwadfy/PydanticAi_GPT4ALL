@@ -12,8 +12,8 @@ from pydantic_ai.providers.openai import OpenAIProvider
 # 1. Definition des erwarteten strukturierten Formats der Antwort
 # Das Modell muss ein JSON mit zwei Feldern liefern: city (Stadt) und country (Land)
 class CityInfo(BaseModel):
-    city: str
-    country: str
+    stadt: str
+    land: str
 
 # 2. Verbindung zum lokalen GPT4All API-Server (OpenAI-kompatibel)
 # Wichtig: Der Server muss vorher gestartet und das Modell geladen sein
@@ -25,8 +25,8 @@ agent = Agent(model=model)
 
 # 3. Prompt formulieren: Das Modell soll im exakten JSON-Format antworten
 prompt = (
-    "What is the capital of Germany? Reply ONLY with this exact format:\n"
-    '{ "city": "City", "country": "Country" }'
+    "Wie heißt die Hauptstadt von Deutschland? Antwort nur mit diesem genauen Format:\n"
+    '{ "stadt": "Stadt", "land": "Land" }'
 )
 
 # 4. Anfrage synchron senden und die rohe Text-Antwort erhalten
@@ -41,8 +41,8 @@ try:
 
     # Wenn erfolgreich, strukturierte Ausgabe anzeigen
     print("Structured Output:")
-    print("City:", validated.city)
-    print("Country:", validated.country)
+    print("Stadt:", validated.stadt)
+    print("Land:", validated.land)
 
 # 6. Fehlerbehandlung: Entweder JSON-Fehler oder Schema-Verletzung
 except (json.JSONDecodeError, ValidationError) as e:
